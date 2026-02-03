@@ -155,3 +155,90 @@ setTimeout(function () {
     console.log("Anonymous Function Executed");
 }, 1000);
 console.log("\n");
+
+
+
+// Function() Constructor
+const adding = new Function("a", "b", "return a + b");
+console.log(adding(10, 20));
+
+
+// Function Hoisting
+hoisted();
+function hoisted() {
+    console.log("Function Hoisted");
+}
+
+
+// Self-Invoking Function (IIFE)
+(function () {
+    console.log("Self Invoking Function");
+})();
+
+
+// Arrow Function
+const square1 = n => n * n;
+console.log(square1(5));
+
+
+// Function Invocation (normal call)
+function greet(name) {
+    console.log("Hello " + name);
+}
+greet("Anila");
+
+
+// Function call()
+function show(city) {
+    console.log(this.name + " from " + city);
+}
+const person1 = { name: "Anila" };
+show.call(person1, "Mumbai");
+
+
+// Function apply()
+show.apply(person1, ["Delhi"]);
+
+
+// Function bind()
+const boundFn = show.bind(person1, "Chennai");
+boundFn();
+
+
+// Closures
+function outer() {
+    let count = 0;
+    return function inner() {
+        count++;
+        console.log(count);
+    };
+}
+const counter = outer();
+counter();
+counter();
+
+
+// Variable Scope
+let x = 10;
+function testScope() {
+    let x = 20;
+    console.log(x);
+}
+testScope();
+console.log(x);
+
+
+// Global Variables
+var globalVar = "I am global";
+function showGlobal() {
+    console.log(globalVar);
+}
+showGlobal();
+
+
+// Smart Function Parameters (Default + Rest)
+function calculate(a = 10, b = 20, ...rest) {
+    console.log(a, b, rest);
+}
+calculate();
+calculate(5, 15, 25, 35);
