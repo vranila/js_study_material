@@ -1,4 +1,4 @@
-var a=10; //
+var a=10; 
 let b=20; //modern changeable
 const c=30; //constant
 
