@@ -2,7 +2,7 @@
 1.string
 2.number  - 1,2,3
 3.null
-4.boolean  - true or false
+4.booleanb  - true or false
 5.bigint    - 12345678
 6.symbol
 7.undefined
@@ -77,7 +77,7 @@ console.log(a,b,c,d);
 
 //explicit
 //tostring
-let num=String(100)
+let num=100;
 let notnulldefined=String(null)
 console.log(num.toString(),notnulldefined.toString());
 
