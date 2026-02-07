@@ -7,9 +7,25 @@ Remove the first city.
 Print the array length.
 
 Use a for...of loop to print each city’s name in uppercase. 
-first try your self, then read the code below
 
 */
 
-let city=["Mumabi","Kannur","Bangalore","Delhi","Pune"];
+let city=["Mumbai","Kannur","Bangalore","Delhi","Pune"];
 city.push("Kollam");
+
+console.log(city);
+
+city.unshift("Kozhikode");
+console.log(city);
+
+
+city.shift(city[0]);
+console.log(city);
+
+
+console.log("The length of the array is :" + city.length);
+
+for (let key in city) 
+{
+    console.log("uppercase city name at "+ key + " : " + city[key].toUpperCase());
+}
