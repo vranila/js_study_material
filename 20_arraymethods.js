@@ -3,15 +3,15 @@ let arr1 = [10, 20];
 arr1.push(30, 40);
 console.log(arr1);
 
-// unshift() → Add element(s) to the beginning
-let arr2 = [20, 30];
-arr2.unshift(5, 10);
-console.log(arr2);
-
 // pop() → Remove the last element
 let arr3 = [1, 2, 3];
 arr3.pop();
 console.log(arr3);
+
+// unshift() → Add element(s) to the beginning
+let arr2 = [20, 30];
+arr2.unshift(5, 10);
+console.log(arr2);
 
 // shift() → Remove the first element
 let arr4 = [10, 20, 30];
@@ -42,3 +42,35 @@ console.log(arr7.includes("x"));
 // length property
 let arr8 = [5, 10, 15, 20];
 console.log(arr8.length);
+
+
+// Original array
+let numbers = [10, 15, 20, 25, 30];
+
+// 1. forEach() – Print each element
+console.log("Using forEach():");
+numbers.forEach(function (num) {
+    console.log(num);
+});
+
+// 2. map() – Increase each number by 5
+let mappedArray = numbers.map(function (num) 
+{
+    return num + 5;
+});
+console.log("After map():", mappedArray);
+
+// 3. filter() – Get numbers greater than 20
+let filteredArray = mappedArray.filter(function (num) 
+{
+    return num > 20;
+});
+console.log("After filter():", filteredArray);
+
+// 4. reduce() – Find sum of filtered numbers
+let sum = filteredArray.reduce(function (total, num) 
+{
+    return total + num;
+}, 0);
+
+console.log("After reduce() (Sum):", sum);
