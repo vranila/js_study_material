@@ -1,0 +1,97 @@
+
+-------- PRACTICE CHALLENGE ----------
+Make a file array_practice.js and try these:
+Create an array of 5 city names.
+Add a new city to the end and start.
+Remove the first city.
+Print the array length.
+Use a for...of loop to print each city’s name in uppercase. 
+
+
+
+Beginner
+
+Check whether a number is even or odd.
+Find the largest of three numbers.
+Reverse a string.
+Check if a string is a palindrome.
+Find the factorial of a number.
+Print the Fibonacci series up to n.
+Count vowels in a string.
+Check whether a number is prime.
+Find the sum of digits of a number.
+Convert Celsius to Fahrenheit.
+
+
+
+Intermediate
+
+Remove duplicate elements from an array.
+Find the second largest number in an array
+Sort an array without using sort().
+Find the missing number in an array from 1 to n.
+Find the frequency of each element in an array.
+Merge two arrays and remove duplicates.
+Find the longest word in a sentence.
+Capitalize the first letter of each word in a string.
+Check whether two strings are anagrams.
+Rotate an array by k positions.
+
+
+
+
+Functions & Objects
+
+Swap two numbers without using a third variable.
+Check whether a number is an Armstrong number.
+Flatten a nested array.
+Convert an object into an array of key–value pairs.
+Find the sum of all values in an object.
+Clone an object without using Object.assign().
+Sort an array of objects by a property.
+Check if a property exists in an object.
+
+
+
+
+Advanced / Core JavaScript
+
+Demonstrate closure with an example.
+Write a function that returns another function.
+Predict the output of a closure-based loop.
+Print numbers 1 to 5 with a delay of 1 second each.
+Convert a callback-based function into a Promise.
+Use async/await to handle an asynchronous task.
+Implement a custom Promise.all().
+
+
+
+
+Polyfill / Utility
+
+Write a polyfill for map()
+Write a polyfill for filter().
+Write a polyfill for reduce().
+Implement bind() manually
+Implement debounce functionality.
+Implement throttle functionality.
+
+
+
+
+Output-Based
+
+Predict the output of console.log(1 + "2" + 3);
+Predict the output of typeof null.
+Predict the output of comparing two empty arrays.
+Predict the output of a var variable inside a function.
+
+
+
+Real-World
+
+Validate a login form using JavaScript.
+Create a to-do list using JavaScript
+Implement a search filter for a list.
+Implement dark and light mode toggle.
+Create a counter using closures.
