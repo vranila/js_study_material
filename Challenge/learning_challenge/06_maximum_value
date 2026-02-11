@@ -1,0 +1,21 @@
+/* 
+-------------------------------------------------------------
+CHALLENGE 3 — FIND MAXIMUM VALUE
+Write a function `findMax(arr)` that returns the largest number.
+Do not use Math.max().
+-------------------------------------------------------------
+*/
+
+function findMax(arr)
+{
+    let max=arr[0];
+    for (let n of arr)
+    {
+        if (n>max)
+            max=n;
+    } 
+    console.log("THe maximum value is : ",max);
+}
+
+let arr=[10,5,20,56];
+findMax(arr);
