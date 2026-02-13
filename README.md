@@ -4,12 +4,13 @@ A structured collection of JavaScript programs covering fundamentals, control fl
 This repository is designed for step-by-step learning and practice.
 
 📌 Topics Covered
+
     1️⃣ Basics
         Console output
         Variables
         Data types
         Operators
-    
+        
     2️⃣ Control Flow
         if statement
         if–else
@@ -52,16 +53,16 @@ This repository is designed for step-by-step learning and practice.
         Word frequency counter
 
 🚀 How to Run
-Make sure Node.js is installed.
-Run any file using:
-node filename.js
+        Make sure Node.js is installed.
+        Run any file using:
+        node filename.js
 
-Example:
-node 01_consolelog.js
+        Example:
+        node 01_consolelog.js
 
 🎯 Purpose
-Strengthen JavaScript fundamentals
-Improve logical thinking
-Practice problem-solving
+    Strengthen JavaScript fundamentals
+    Improve logical thinking
+    Practice problem-solving
 
 Build a strong programming foundation
