@@ -16,3 +16,21 @@ function countVowels(text)
 
 let result = countVowels(text);
 console.log("Vowels in text is : ", result);
+
+
+//OR
+
+
+
+let str ="jave";
+let vowles="aeiouAEIOU";
+let count1 =0;
+for (let i=0;i<str.length ;i++)
+{
+     if (vowles.includes(str[i]))
+     {
+        count1 ++;
+     }
+
+}
+     console.log(count1);
