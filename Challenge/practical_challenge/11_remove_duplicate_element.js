@@ -12,7 +12,6 @@ function removedu(arr)
     return newarr;
 }
 
-
 let result1 = removedu(arr);
 console.log(result1);
 
