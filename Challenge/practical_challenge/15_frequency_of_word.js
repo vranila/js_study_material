@@ -14,6 +14,23 @@ for (let i = 0; i < str.length; i++) {
 
 console.log(frequency);
 
+//or
+let arr="javaj";
+let result = {};
+for (let i = 0; i < arr.length; i++) 
+{
+    if (result[arr[i]]) 
+    {
+      result[arr[i]]++;
+    } 
+    else 
+      {
+      result[arr[i]] = 1;
+    }
+}
+console.log(result);
+
+
 
   
 
