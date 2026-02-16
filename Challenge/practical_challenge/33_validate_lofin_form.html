@@ -1,0 +1,20 @@
+<form onsubmit="return validateForm()">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button type="submit">Login</button>
+</form>
+
+<script>
+function validateForm() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === "" || password === "") {
+        alert("All fields are required!");
+        return false;
+    }
+    return true;
+}
+</script>
+
+
