@@ -1,0 +1,99 @@
+Write a program to reverse a string in JavaScript.
+
+Write a program to check whether a string is a palindrome.
+
+Find the largest number in an array in JavaScript.
+
+How do you remove the first element from an array in JavaScript?
+
+Write a program to use a callback function.
+
+Write code to create an arrow function.
+
+Write a program to add a property to an object.
+
+Write a program to delete a property from an object.
+
+What will be the output of: console.log([1, 2, 3].reduce((a, b) => a + b));?
+
+What will be the output of: console.log('gfg'.repeat(3));?
+
+What will be the output of: console.log(1 + '2');?
+
+What will be the output of: console.log('6' - 1);?
+
+What will be the output of: console.log(1 === '1');?
+
+What will be the output of: console.log(null == undefined);?
+
+Write a program to find the sum of elements in an array.
+
+Write a program to check if a number is prime.
+
+Write a program to print the Fibonacci sequence up to n terms.
+
+Write a program to find the factorial of a number.
+
+Write a program to calculate the power of a number.
+
+Write a program to print the frequency of elements in an array.
+
+Write a program to count the occurrences of a character in a string.
+
+Write a program to convert Celsius to Fahrenheit.
+
+Write a program to convert Fahrenheit to Celsius.
+
+Write a program to sort an array in ascending order.
+
+Write a program to sort an array in descending order.
+
+Write a program to merge two arrays.
+
+Find the intersection of two arrays.
+
+Find the union of two arrays.
+
+Write a program to check if a number is even or odd.
+
+Write a program to find the minimum value in an array.
+
+Write a program to check if a string contains another string.
+
+Find the first non-repeated character in a string.
+
+Find the longest word in a string.
+
+Write a program to capitalize the first letter of each word in a sentence.
+
+Convert an array of strings to uppercase.
+
+Write a program to reverse an array.
+
+Write a program to get the last element of an array.
+
+Write a program to remove falsy values from an array.
+
+Write a program to calculate factorial using recursion.
+
+Create an object and print one of its properties.
+
+Use the map() function on an array.
+
+Write a program to create a simple class in JavaScript.
+
+Use JSON to parse and stringify data.
+
+Convert a string to an array of words.
+
+Write a switch statement in JavaScript.
+
+Write a program to check if two strings are anagrams.
+
+Find the maximum difference between two numbers in an array.
+
+Write a program to remove duplicates from an array.
+
+Write a program to count vowels in a string.
+
+Write a program to get unique characters from a string.

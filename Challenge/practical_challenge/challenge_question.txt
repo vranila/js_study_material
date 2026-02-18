@@ -8,9 +8,7 @@ Print the array length.
 Use a for...of loop to print each city’s name in uppercase. 
 
 
-
 Beginner
-
 Check whether a number is even or odd.
 Find the largest of three numbers.
 Reverse a string.
@@ -22,28 +20,27 @@ Check whether a number is prime.
 Find the sum of digits of a number.
 Convert Celsius to Fahrenheit.
 
-
-
 Intermediate
-
 Remove duplicate elements from an array.
 Find the second largest number in an array
 Sort an array without using sort().
 Find the missing number in an array from 1 to n.
-Find the frequency of each element in an array.
 Merge two arrays and remove duplicates.
+Swap two numbers without using a third variable.
+
+
+Output-Based
+Predict the output of console.log(1 + "2" + 3);
+Predict the output of typeof null.
+Predict the output of comparing two empty arrays.
+Predict the output of a var variable inside a function.
+Find the frequency of each element in an array.
 Find the longest word in a sentence.
 Capitalize the first letter of each word in a string.
 Check whether two strings are anagrams.
 Rotate an array by k positions.
-
-
-
-
-Functions & Objects
-
-Swap two numbers without using a third variable.
 Check whether a number is an Armstrong number.
+
 Flatten a nested array.
 Convert an object into an array of key–value pairs.
 Find the sum of all values in an object.
@@ -67,28 +64,7 @@ Implement a custom Promise.all().
 
 
 
-Polyfill / Utility
 
-Write a polyfill for map()
-Write a polyfill for filter().
-Write a polyfill for reduce().
-Implement bind() manually
-Implement debounce functionality.
-Implement throttle functionality.
-
-
-
-
-Output-Based
-
-Predict the output of console.log(1 + "2" + 3);
-Predict the output of typeof null.
-Predict the output of comparing two empty arrays.
-Predict the output of a var variable inside a function.
-
-
-
-Real-World
 
 Validate a login form using JavaScript.
 Create a to-do list using JavaScript
