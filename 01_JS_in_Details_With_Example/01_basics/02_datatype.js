@@ -7,16 +7,36 @@
 6.symbol
 7.undefined
 */
+console.log("-----------------------Primitive--------------------------")
+
+let name = "Anila";       // String
+let age = 25;             // Number
+let isStudent = true;     // Boolean
+let data;                 // Undefined
+let value = null;         // Null
+console.log(name);  // string
+console.log(age);      // number
+console.log(isStudent);     // boolean
+console.log(data); // Undefined
+console.log(value)     // Null
+
 
 let a="Anila";
-let age=28;
+let age1=28;
 let not=null;
 let bol=true;
 let big=1234567890;
 let sym=Symbol("ph");
 let notdefined;
 
-console.log(a,age,not,bol,big,sym,notdefined);
+console.log(a,age1,not,bol,big,sym,notdefined);
+
+console.log("---------------typeof------------------")
+console.log(typeof "Hello");  // string
+console.log(typeof 100);      // number
+console.log(typeof true);     // boolean
+console.log(typeof null);     // object (JavaScript bug)
+
 
 
 /*
@@ -26,11 +46,14 @@ Array – Ordered list of values
 Date – Date and time manipulation
 */ 
 
+
+console.log("-----------------------Non - Primitive--------------------------")
 let fruits={name:"apple",color:"red"};
 let arr=[1,2,3];
 let today=new Date();
 
 console.log(fruits,arr,today);
+
 
 //data type checking  -  typeof
 // typeof null - object will come -  (this is a known quirk in JavaScript)
@@ -99,8 +122,8 @@ console.log(abool,bbool,cbool);
 // date conversion 
 // date -> number
 let date = new Date();
-let value = date.getTime();
-console.log(date, value);
+let value0 = date.getTime();
+console.log(date, value0);
 
 let value1 = Date.now();
 console.log(value1);
@@ -112,3 +135,11 @@ console.log(value2);
 //date-> string 
 let date1 = new Date();
 console.log(String(date1));
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+What is VS Code?
+Visual Studio Code is a lightweight and powerful code editor.
+
+Used for:
+        Writing code
+        Debugging
+        Git integration
+
+
+Extension support
+
+🔹 Recommended Extensions
+ESLint
+        JavaScript linter that identifies and reports code quality issues
+        Enforces coding standards and best practices
+        Helps catch bugs before runtime
+
+
+Prettier
+        Code formatter that automatically formats your code
+        Ensures consistent code style across your project
+        Removes manual formatting decisions
+
+
+GitLens
+        Git integration tool that shows blame information and commit history
+        Visualizes code authorship and changes
+        Provides Git commands and repository insights within VS Code
+
+
+Thunder Client
+        API testing tool for testing HTTP requests and APIs
+        Alternative to Postman
+        Helps debug API endpoints and test web services directly in VS Code
+
+
+
+🔹 Folder Setup Example
+        my-project/
+        │
+        ├── index.js
+        └── package.json
+
+        Open folder in VS Code:
+        code .
+
+
+🔹 Debugging Example
+
+    Create file:
+
+        function multiply(a, b) {
+        return a * b;
+        }
+
+        let result = multiply(5, 4);
+        console.log(result);
+
+
+Debug Steps:
+
+Click on line number → Add breakpoint
+Click Run → Start Debugging
+Inspect:
+    Call stack
+    Variables
+    Scope
+
+
+
+🔹 Integrated Terminal
+
+    Open inside VS Code:
+    Ctrl + `
+
+Run Node directly inside editor.

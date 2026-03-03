@@ -1,0 +1,52 @@
+🔹 What is npm?
+npm is Node’s package manager.
+
+It allows:
+Installing third-party libraries
+Managing project dependencies
+Running automation scripts
+
+
+
+🔹 Step 1 – Initialize Project
+        npm init -y
+
+        Creates:
+            {
+            "name": "project-name",
+            "version": "1.0.0",
+            "main": "index.js",
+            "license": "ISC"
+            }
+
+
+🔹 Step 2 – Install a Package
+        Example: Install lodash
+
+        npm install lodash
+
+Now use it:
+
+// index.js
+        const _ = require("lodash");
+        console.log(_.capitalize("javascript learning"));
+
+Run:
+        node index.js
+
+Output:
+        Javascript learning
+
+
+
+🔹 Local vs Global Installation
+    Local (project-specific):
+            npm install express
+
+    Global (system-wide):
+            npm install -g typescript
+
+
+🔹 Dev Dependencies
+        npm install nodemon --save-dev
+    Used only during development.

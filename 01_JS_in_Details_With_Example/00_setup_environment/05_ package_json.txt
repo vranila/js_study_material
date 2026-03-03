@@ -1,0 +1,68 @@
+What is package.json?
+  It is the central configuration file of a Node project.
+
+Contains:
+
+  Project metadata
+  Dependencies
+  Scripts
+  Version info
+
+
+🔹 Example Structure
+      {
+        "name": "learning-node",
+        "version": "1.0.0",
+        "description": "Practice project",
+        "main": "index.js",
+        "scripts": {
+          "start": "node index.js",
+          "dev": "nodemon index.js"
+        },
+        "dependencies": {
+          "express": "^4.18.2"
+        },
+        "devDependencies": {
+          "nodemon": "^3.0.0"
+        }
+      }
+
+
+🔹 Run Scripts
+    Instead of:
+      node index.js
+    You can run:
+      npm run start
+
+
+🔹 Version Symbols
+  Symbol	Meaning
+      ^	Allows minor updates
+      ~	Allows patch updates
+    Exact	Fixed version
+
+  Example:
+  ^4.18.2
+
+  Allows:
+  4.x.x
+
+  But not:
+  5.x.x
+
+
+
+🔹 Working Example with Script
+
+    package.json:
+    {
+      "scripts": {
+        "start": "node app.js"
+      }
+    }
+
+app.js:
+    console.log("App started via npm script");
+
+Run:
+  npm run start

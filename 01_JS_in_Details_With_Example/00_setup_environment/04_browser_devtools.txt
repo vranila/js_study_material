@@ -1,0 +1,67 @@
+What are Browser DevTools?
+    Built-in debugging tools inside browsers like:
+        Google Chrome
+        Mozilla Firefox
+
+Open with:
+F12
+
+
+🔹 Important Tabs
+1️⃣ Console
+        Execute JavaScript live.
+        console.log("Hello Browser");
+        console.table([{name:"Anila", age:25}]);
+
+
+2️⃣ Elements
+        Inspect and modify HTML/CSS in real time.
+
+3️⃣ Network
+
+Track API calls.
+
+        Example:
+            Open website
+            Reload page
+            Check request status
+
+        Observe:
+
+            Status code
+            Response time
+            Headers
+            Payload
+
+
+4️⃣ Application
+
+    Inspect:
+        LocalStorage
+        SessionStorage
+        Cookies
+
+
+Example:
+
+        localStorage.setItem("user", "Anila");
+        Check in Application tab.
+
+
+
+🔹 Debugging Example
+
+Create HTML file:
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="show()">Click</button>
+<script>
+function show() {
+  console.log("Button clicked");
+}
+</script>
+</body>
+</html>
+
+Open DevTools → Console → Click button → See output.

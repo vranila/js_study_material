@@ -1,7 +1,7 @@
 /*
 Arithematic Operators
 */
-console.log("Arithematic Operators");
+console.log("-----------------------------Arithematic Operators-------------------------------");
 let x = 10;
 let y = 20;
 console.log(x + y);  
@@ -21,7 +21,7 @@ console.log("a" + 10);
 console.log(" ");
 
 /*Comparison Operators*/
-console.log("Comparison Operators");
+console.log("-------------------------------Comparison Operators");
 let a = 10;
 let b = 20;
 console.log(a == b);    
@@ -36,7 +36,7 @@ console.log(a <= b);
 console.log(" ");
 
 /*Logical  Operators*/
-console.log("Logical  Operators");
+console.log("-------------------------------Logical  Operators");
 let x3 = 10;
 let y3= 0;
 console.log(x3 && y3);   
@@ -46,7 +46,7 @@ console.log(!x3);
 console.log(" ");
 
 /*Bitwise   Operators*/
-console.log("Bitwise   Operators");
+console.log("-------------------------------Bitwise   Operators");
 let x4 = 2;  
 let y4= 3;  
 console.log(x4 & y4);    
@@ -62,7 +62,7 @@ console.log(" ");
 
 
 /*Assignment    Operators*/
-console.log("Assignment    Operators");
+console.log("-------------------------------Assignment  Operators-------------------------------");
 let z = 10;
 z += 5;
 console.log(z);  
@@ -79,7 +79,7 @@ console.log(z);
 console.log(" ");
 
 
-console.log("Conditional Operator (? :)");
+console.log("-------------------------------Conditional Operator (? :)-------------------------------");
 let age = 18;
 let result1 = (age >= 18) ? "Eligible" : "Not Eligible";
 console.log(result1);
@@ -87,49 +87,49 @@ console.log(result1);
 
 console.log(" ");
 
-console.log("typeof Operator");
+console.log("-------------------------------typeof Operator-------------------------------");
 console.log(typeof 10);        
 console.log(typeof "Hello");   
 
 console.log(" ");
 
-console.log("Nullish Coalescing Operator (??)");//It returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand
+console.log("-------------------------------Nullish Coalescing Operator (??)-------------------------------");//It returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand
 let value = null;
 console.log(value ?? "Default"); 
 
 console.log(" ");
 
-console.log("delete Operator");
+console.log("-------------------------------delete Operator-------------------------------");
 let obj = { name: "JS", version: "ES6" };
 delete obj.version;
 console.log(obj); 
 
 console.log(" ");
 
-console.log("Comma Operator");//It evaluates its operands (from left to right) and returns the value of the last operand.
+console.log("-------------------------------Comma Operator-------------------------------");//It evaluates its operands (from left to right) and returns the value of the last operand.
 let result = (1, 2, 3);
 console.log(result); 
 
 console.log(" ");
 
-console.log("Grouping Operator ( )");
+console.log("-------------------------------Grouping Operator ( )-------------------------------");
 console.log((5 + 3) * 2); 
 
 console.log(" ");
 
-console.log("Spread Operator (...)");
+console.log("-------------------------------Spread Operator (...)-------------------------------");
 let arr = [1, 2, 3];
 let newArr = [...arr, 4, 5];
 console.log(newArr); 
 
 console.log(" ");
 
-console.log("Exponentiation Operator (**)");
+console.log("-------------------------------Exponentiation Operator (**)-------------------------------");
 console.log(2 ** 3); 
 
 console.log(" ");
 
-console.log("yield Operator (Generator)");
+console.log("-------------------------------yield Operator (Generator)-------------------------------");
 function* demo() {
   yield 1;
   yield 2;
