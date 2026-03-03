@@ -1,0 +1,84 @@
+Webpack
+
+Webpack is a module bundler.
+
+It:
+    Bundles multiple JS files into one
+    Supports CSS, images, fonts
+    Transpiles via Babel
+    Optimizes for production
+
+Why Webpack?
+
+Without Webpack:
+
+        index.html
+        script1.js
+        script2.js
+        script3.js
+
+With Webpack:
+
+        bundle.js (single optimized file)
+
+
+Basic Setup
+Step 1: Install
+        npm init -y
+        npm install webpack webpack-cli --save-dev
+
+Step 2: Project Structure
+        project/
+        │
+        ├── src/
+        │   index.js
+        │
+        ├── dist/
+        │
+        └── webpack.config.js
+
+
+Step 3: src/index.js
+                import { greet } from "./message.js";
+                greet();
+
+        src/message.js
+                export function greet() {
+                console.log("Hello from Webpack");
+                }
+
+
+
+Step 4: webpack.config.js
+            const path = require("path");
+            module.exports = {
+            mode: "development",
+            entry: "./src/index.js",
+            output: {
+                filename: "bundle.js",
+                path: path.resolve(__dirname, "dist")
+            }
+            };
+
+
+Step 5: Build
+            npx webpack
+
+        Generates:
+            dist/bundle.js
+
+
+
+Production Mode
+npx webpack --mode production
+    Minified
+    Optimized
+    Tree shaking enabled
+
+
+Real-World Usage
+
+Used internally by:
+    React (older setups)
+    Next.js
+    Angular

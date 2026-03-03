@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DOM Selectors Visual Demo</title>
+
+<style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+        background-color: #f2f2f2;
+    }
+
+    h1 {
+        cursor: pointer;
+    }
+
+    .container {
+        border: 2px solid black;
+        padding: 15px;
+        margin-top: 20px;
+        background: white;
+    }
+
+    .box {
+        padding: 15px;
+        margin: 10px 0;
+        background: lightblue;
+        border: 2px solid blue;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .highlight {
+        background: orange !important;
+        color: white;
+    }
+
+    .selected {
+        border: 3px solid red !important;
+    }
+
+    button {
+        margin: 5px 5px 5px 0;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+<h1 id="title">Click Me to Change Color</h1>
+
+<div class="container">
+
+    <div class="box">
+        Box 1
+        <span>Child 1</span>
+        <span>Child 2</span>
+    </div>
+
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+</div>
+
+<br>
+
+<button onclick="changeAllBoxes()">Highlight All Boxes</button>
+<button onclick="highlightParent()">Highlight Parent</button>
+<button onclick="highlightChildren()">Highlight Children</button>
+<button onclick="highlightNext()">Highlight Next Sibling</button>
+<button onclick="highlightPrevious()">Highlight Previous Sibling</button>
+
+<script>
+
+// ===============================
+// SELECTORS
+// ===============================
+
+// By ID
+let el1 = document.getElementById("title");
+
+// By classe
+let el2 = document.getElementsByClassName("box");
+
+// By tag
+let el3 = document.getElementsByTagName("p");
+
+// querySelector
+let el4 = document.querySelector(".box");
+let el6 = document.querySelectorAll(".box")[1];
+
+// querySelectorAll
+let el5 = document.querySelectorAll(".box");
+
+
+// ===============================
+// VISUAL INTERACTIONS
+// ===============================
+
+// Change title color on click
+el1.addEventListener("click", function () {
+    el1.style.color = "red";
+});
+
+
+// Highlight all boxes
+function changeAllBoxes() {
+    el5.forEach(element => {
+        element.classList.toggle("highlight");
+    });
+}
+
+
+// Highlight parent of first box
+function highlightParent() {
+    let parent = el4.parentElement;
+    parent.classList.toggle("selected");
+}
+
+
+// Highlight children of first box
+function highlightChildren() {
+    let children = el4.children;
+    for (let child of children) {
+        child.style.backgroundColor = "yellow";
+    }
+}
+
+
+// Highlight next sibling
+function highlightNext() {
+    let next = el4.nextElementSibling;
+    if (next) {
+        next.classList.toggle("highlight");
+    }
+}
+
+
+// Highlight previous sibling
+function highlightPrevious() {
+    let prev = el6.previousElementSibling;
+    if (prev) {
+        prev.classList.toggle("highlight");
+    }
+}
+
+</script>
+
+</body>
+</html>

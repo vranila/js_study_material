@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise Error Handling</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .box {
+            width: 450px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: lightblue;
+            min-height: 40px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Promise Error Handling Demo</h2>
+
+<div class="box" id="output">Click a button</div>
+
+<button onclick="runPromiseCatch()">Promise .catch()</button>
+<button onclick="runAsyncTryCatch()">Async try/catch</button>
+<button onclick="runUnhandled()">Unhandled Rejection</button>
+<button onclick="runCustomError()">Custom Error</button>
+
+<script>
+
+let box = document.getElementById("output");
+
+// ===============================
+// PROMISE ERROR HANDLING (.catch)
+// ===============================
+
+function runPromiseCatch() {
+
+    box.textContent = "Running Promise...";
+    box.style.backgroundColor = "orange";
+
+    new Promise((resolve, reject) => {
+        reject("Something went wrong");
+    })
+    .then(res => {
+        box.textContent = res;
+        box.style.backgroundColor = "lightgreen";
+    })
+    .catch(err => {
+        box.textContent = "Caught: " + err;
+        box.style.backgroundColor = "lightcoral";
+    });
+}
+
+
+// ===============================
+// TRY/CATCH WITH ASYNC
+// ===============================
+
+async function example() {
+    try {
+        let data = await Promise.reject("Async error");
+        return data;
+    } catch (err) {
+        return "Handled: " + err;
+    }
+}
+
+function runAsyncTryCatch() {
+
+    box.textContent = "Running async...";
+    box.style.backgroundColor = "orange";
+
+    example().then(result => {
+        box.textContent = result;
+        box.style.backgroundColor = "lightcoral";
+    });
+}
+
+
+// ===============================
+// UNHANDLED REJECTION (Browser)
+// ===============================
+
+window.addEventListener("unhandledrejection", event => {
+    box.textContent = "Unhandled promise rejection: " + event.reason;
+    box.style.backgroundColor = "red";
+});
+
+function runUnhandled() {
+
+    box.textContent = "Triggering unhandled rejection...";
+    box.style.backgroundColor = "orange";
+
+    // No catch provided → triggers global handler
+    Promise.reject("Global error occurred");
+}
+
+
+// ===============================
+// THROW CUSTOM ERROR
+// ===============================
+
+function validate(age) {
+    if (age < 18) {
+        throw new Error("Age must be 18+");
+    }
+}
+
+function runCustomError() {
+
+    box.textContent = "Validating age...";
+    box.style.backgroundColor = "orange";
+
+    try {
+        validate(16);
+        box.textContent = "Valid age";
+        box.style.backgroundColor = "lightgreen";
+    } catch (err) {
+        box.textContent = err.message;
+        box.style.backgroundColor = "lightcoral";
+    }
+}
+
+</script>
+
+</body>
+</html>

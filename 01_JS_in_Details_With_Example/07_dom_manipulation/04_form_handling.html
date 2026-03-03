@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Handling</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        form {
+            width: 300px;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        #live {
+            margin-top: 10px;
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Form Handling Example</h2>
+
+<form id="myForm">
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button type="submit">Submit</button>
+</form>
+
+<div id="live"></div>
+<div id="output"></div>
+
+<script>
+
+// ===============================
+// FORM HANDLING
+// ===============================
+
+let form = document.querySelector("#myForm");
+let usernameInput = document.querySelector("#username");
+let passwordInput = document.querySelector("#password");
+let output = document.querySelector("#output");
+let live = document.querySelector("#live");
+
+// Submit event
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault(); // stop page reload
+
+    let username = usernameInput.value;
+    let password = passwordInput.value;
+
+    if (username === "" || password === "") {
+        output.textContent = "Please fill all fields";
+        output.className = "error";
+        return;
+    }
+
+    output.className = "";
+    output.textContent = "Submitted: " + username + " | " + password;
+});
+
+// Input event (fires every time user types)
+usernameInput.addEventListener("input", function (e) {
+    live.textContent = "Typing: " + e.target.value;
+});
+
+// Change event (fires when input loses focus)
+usernameInput.addEventListener("change", function (e) {
+    live.textContent = "Final Value: " + e.target.value;
+});
+
+</script>
+
+</body>
+</html>

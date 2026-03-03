@@ -1,0 +1,29 @@
+
+What is Lazy Loading?
+    Lazy loading delays loading of resources until needed.
+
+    Improves:
+        Initial load time
+        Performance
+        Bandwidth usage
+
+Image Lazy Loading
+    HTML:
+    <img src="image.jpg" loading="lazy">
+
+
+Dynamic Import (JavaScript)
+    button.addEventListener("click", async () => {
+    const module = await import("./heavyModule.js");
+    module.run();
+    });
+This loads code only when needed.
+
+
+Route-Based Lazy Loading (SPA)
+Frameworks like:
+    React
+    Angular
+    Vue
+
+Support code splitting.

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create & Insert Elements</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 15px;
+            min-height: 150px;
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .ref {
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Create & Insert Elements</h2>
+
+<div class="container">
+    <div class="ref">Reference Element</div>
+</div>
+
+<br>
+
+<button onclick="createElementBox()">Create Element</button>
+<button onclick="appendElement()">Append</button>
+<button onclick="prependElement()">Prepend</button>
+<button onclick="insertBeforeElement()">Insert Before Ref</button>
+<button onclick="removeElement()">Remove Element</button>
+
+<script>
+
+let container = document.querySelector(".container");
+let ref = document.querySelector(".ref");
+let div; // will hold created element
+
+// ===============================
+// CREATE ELEMENT
+// ===============================
+
+function createElementBox() {
+    div = document.createElement("div");
+    div.textContent = "New Div";
+    div.className = "box";
+}
+
+// ===============================
+// APPEND
+// ===============================
+
+function appendElement() {
+    if (div) {
+        container.appendChild(div);
+    }
+}
+
+// ===============================
+// PREPEND
+// ===============================
+
+function prependElement() {
+    if (div) {
+        container.prepend(div);
+    }
+}
+
+// ===============================
+// INSERT BEFORE
+// ===============================
+
+function insertBeforeElement() {
+    if (div) {
+        container.insertBefore(div, ref);
+    }
+}
+
+// ===============================
+// REMOVE
+// ===============================
+
+function removeElement() {
+    if (div) {
+        div.remove();
+    }
+}
+
+</script>
+
+</body>
+</html>

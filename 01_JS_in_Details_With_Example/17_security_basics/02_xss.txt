@@ -1,0 +1,109 @@
+1. XSS (Cross-Site Scripting)
+ What is XSS?
+        XSS is a vulnerability where an attacker injects malicious JavaScript into a website that runs in other users' browsers.
+        The attack executes in the victim’s browser under the trusted website’s origin.
+
+Types of XSS
+1️⃣ Stored XSS (Persistent)
+    Malicious script stored in database
+    Delivered to all users
+
+    Example: comment field injection
+
+    Example attack:
+    <script>alert('Hacked!')</script>
+
+
+2️⃣ Reflected XSS
+
+    Script injected via URL parameter
+    Immediately reflected in response
+
+    Example:
+    https://example.com?name=<script>alert(1)</script>
+
+
+3️⃣ DOM-Based XSS
+
+    Happens entirely in frontend JS
+    Unsafe DOM manipulation
+
+    Bad example:
+    element.innerHTML = userInput; // dangerous
+
+
+Preventing XSS
+
+✅ 1. Escape Output
+    Never trust user input.
+
+    Instead of:
+    element.innerHTML = userInput;
+
+    Use:
+    element.textContent = userInput;
+
+
+✅ 2. Use Content Security Policy (CSP)
+    CSP prevents inline scripts from executing.
+
+    Example header:
+    Content-Security-Policy: default-src 'self'
+
+
+✅ 3. Sanitize Input
+    Use libraries like:
+    DOMPurify
+    validator.js
+
+
+
+CSRF (Cross-Site Request Forgery)
+What is CSRF?
+    CSRF tricks authenticated users into sending unintended requests.
+
+Example:
+    User logged into bank
+    Attacker sends hidden request
+    Browser automatically includes session cookie
+
+
+Why CSRF Works
+    Because:
+    Cookies are sent automatically
+    Server trusts authenticated session
+
+
+Preventing CSRF
+✅ 1. CSRF Tokens
+
+        Server generates token:
+        Stored in session
+        Must be sent with every request
+
+        Example:
+            fetch("/transfer", {
+            method: "POST",
+            headers: {
+                "X-CSRF-Token": token
+            }
+            });
+
+
+✅ 2. SameSite Cookies
+
+        Set cookie attribute:
+        Set-Cookie: sessionId=abc123; SameSite=Strict;
+        Options:
+        Strict
+        Lax
+        None
+
+
+
+✅ 3. Use Double Submit Cookie Pattern
+
+        Token stored in:
+        Cookie
+        Request header
+        Server verifies both match.

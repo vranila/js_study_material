@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async / Await Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #output {
+            width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: lightblue;
+            min-height: 40px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Async / Await Demonstration</h2>
+
+<div id="output">Click a button</div>
+
+<button onclick="runGetData()">Run getData()</button>
+<button onclick="runDelay()">Run Delay Example</button>
+<button onclick="runError()">Run Error Handling</button>
+
+<script>
+
+// ===============================
+// async FUNCTION
+// ===============================
+
+async function getData() {
+  return "Hello"; 
+}
+
+function runGetData() {
+    let box = document.getElementById("output");
+    box.textContent = "Loading...";
+    box.style.backgroundColor = "orange";
+
+    getData().then(result => {
+        box.textContent = result;
+        box.style.backgroundColor = "lightgreen";
+    });
+}
+
+
+// ===============================
+// await KEYWORD
+// ===============================
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function runDelay() {
+  let box = document.getElementById("output");
+
+  box.textContent = "Start";
+  box.style.backgroundColor = "orange";
+
+  await delay(2000);
+
+  box.textContent = "After delay (2 seconds)";
+  box.style.backgroundColor = "lightgreen";
+}
+
+
+// ===============================
+// ERROR HANDLING
+// ===============================
+
+async function test() {
+  try {
+    let result = await Promise.reject("Error occurred");
+    return result;
+  } catch (err) {
+    return "Caught: " + err;
+  }
+}
+
+function runError() {
+    let box = document.getElementById("output");
+    box.textContent = "Testing error...";
+    box.style.backgroundColor = "orange";
+
+    test().then(result => {
+        box.textContent = result;
+        box.style.backgroundColor = "lightcoral";
+    });
+}
+
+</script>
+
+</body>
+</html>

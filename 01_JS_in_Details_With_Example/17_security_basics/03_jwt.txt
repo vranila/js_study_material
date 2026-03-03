@@ -1,0 +1,77 @@
+What is JWT?
+
+        JWT is a compact token format used for:
+        Authentication
+        Authorization
+        Stateless session management
+
+JWT Structure
+
+    JWT has 3 parts:
+    HEADER.PAYLOAD.SIGNATURE
+
+    Example:
+
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    .
+    eyJ1c2VySWQiOjEyMywiaWF0IjoxNjAwMDAwMDB9
+    .
+    SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+
+1️⃣ Header
+    Contains:
+        Algorithm
+        Token type
+
+    Example:
+    {
+    "alg": "HS256",
+    "typ": "JWT"
+    }
+
+
+2️⃣ Payload
+    Contains:
+        User data
+        Claims
+
+    Example:
+    {
+    "userId": 123,
+    "role": "admin"
+    }
+
+Payload is NOT encrypted (just Base64 encoded).
+
+
+
+3️⃣ Signature
+
+Created using:
+HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  secret
+)
+Prevents tampering.
+
+
+
+🔁 JWT Authentication Flow
+    User logs in
+    Server verifies credentials
+    Server generates JWT
+    Client stores token (localStorage or cookie)
+    Client sends token in Authorization header
+
+    Example:
+    Authorization: Bearer <token>
+
+
+JWT Security Best Practices
+    Use HTTPS
+    Short expiration time
+    Store in HttpOnly cookies (safer than localStorage)
+    Rotate secrets
+    Validate signature on every request
+

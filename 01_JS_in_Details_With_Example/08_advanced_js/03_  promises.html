@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .box {
+            width: 400px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: lightblue;
+            min-height: 40px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Promise Demonstration</h2>
+
+<div class="box" id="output">Click a button to start</div>
+
+<button onclick="basicPromise()">Basic Promise</button>
+<button onclick="promiseChaining()">Promise Chaining</button>
+<button onclick="runAll()">Promise.all()</button>
+<button onclick="runRace()">Promise.race()</button>
+<button onclick="runAllSettled()">Promise.allSettled()</button>
+<button onclick="runAny()">Promise.any()</button>
+
+<script>
+
+// ===============================
+// BASIC PROMISE
+// ===============================
+
+function basicPromise() {
+
+    let box = document.getElementById("output");
+    box.textContent = "Promise is pending...";
+    box.style.backgroundColor = "orange";
+
+    let promise = new Promise((resolve, reject) => {
+        let success = true;
+
+        setTimeout(() => {
+            if (success) {
+                resolve("Operation successful");
+            } else {
+                reject("Operation failed");
+            }
+        }, 1000);
+    });
+
+    promise
+        .then(result => {
+            box.textContent = result;
+            box.style.backgroundColor = "lightgreen";
+        })
+        .catch(error => {
+            box.textContent = error;
+            box.style.backgroundColor = "lightcoral";
+        })
+        .finally(() => {
+            box.textContent += " | Finished execution";
+        });
+}
+
+
+// ===============================
+// PROMISE CHAINING
+// ===============================
+
+function promiseChaining() {
+
+    let box = document.getElementById("output");
+    box.textContent = "Chaining started...";
+    box.style.backgroundColor = "lightblue";
+
+    Promise.resolve(5)
+        .then(num => num * 2)
+        .then(num => num + 3)
+        .then(result => {
+            box.textContent = "Final Result: " + result;
+            box.style.backgroundColor = "lightgreen";
+        });
+}
+
+
+// ===============================
+// Promise.all()
+// ===============================
+
+function runAll() {
+
+    let box = document.getElementById("output");
+    box.textContent = "Waiting for all promises...";
+    box.style.backgroundColor = "orange";
+
+    Promise.all([
+        Promise.resolve(1),
+        Promise.resolve(2)
+    ])
+    .then(values => {
+        box.textContent = "All Resolved: " + values;
+        box.style.backgroundColor = "lightgreen";
+    });
+}
+
+
+// ===============================
+// Promise.race()
+// ===============================
+
+function runRace() {
+
+    let box = document.getElementById("output");
+    box.textContent = "Racing promises...";
+    box.style.backgroundColor = "orange";
+
+    Promise.race([
+        new Promise(res => setTimeout(res, 100, "Fast")),
+        new Promise(res => setTimeout(res, 500, "Slow"))
+    ])
+    .then(value => {
+        box.textContent = "Winner: " + value;
+        box.style.backgroundColor = "lightgreen";
+    });
+}
+
+
+// ===============================
+// Promise.allSettled()
+// ===============================
+
+function runAllSettled() {
+
+    let box = document.getElementById("output");
+    box.textContent = "Checking all results...";
+    box.style.backgroundColor = "orange";
+
+    Promise.allSettled([
+        Promise.resolve("Success"),
+        Promise.reject("Fail")
+    ])
+    .then(results => {
+        box.textContent = JSON.stringify(results);
+        box.style.backgroundColor = "lightgreen";
+    });
+}
+
+
+// ===============================
+// Promise.any()
+// ===============================
+
+function runAny() {
+
+    let box = document.getElementById("output");
+    box.textContent = "Waiting for first success...";
+    box.style.backgroundColor = "orange";
+
+    Promise.any([
+        Promise.reject("Error"),
+        Promise.resolve("First success")
+    ])
+    .then(value => {
+        box.textContent = "Resolved: " + value;
+        box.style.backgroundColor = "lightgreen";
+    });
+}
+
+</script>
+
+</body>
+</html>

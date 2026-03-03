@@ -1,0 +1,59 @@
+What is Vite?
+        Vite is a modern frontend build tool.
+        Created by Evan You (creator of Vue.js).
+
+🔹 Why Vite?
+
+    Webpack Problems:
+        Slow startup
+        Heavy bundling
+
+    Vite Solution:
+
+        Lightning fast dev server
+        Native ES Modules
+        Instant HMR (Hot Module Replacement)
+
+🔹 Create Vite Project
+        npm create vite@latest
+
+    Choose:
+        React
+        Vue
+        Vanilla
+        TypeScript
+
+🔹 Example: React + Vite
+        npm create vite@latest my-app
+        cd my-app
+        npm install
+        npm run dev
+
+
+
+🔹 Vite Folder Structure
+        my-app/
+        │
+        ├── src/
+        │   main.jsx
+        │   App.jsx
+        │
+        ├── index.html
+        ├── package.json
+        ├── vite.config.js
+
+
+🔹 Example Vite Config
+        import { defineConfig } from 'vite';
+        export default defineConfig({
+        server: {
+            port: 3000
+        }
+        });
+
+
+🔹 Build for Production
+        npm run build
+
+Creates:
+    dist/

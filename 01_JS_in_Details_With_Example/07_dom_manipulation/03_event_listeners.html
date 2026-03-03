@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .hover-box {
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+            line-height: 100px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Most Common Events</h2>
+
+<button id="btn">Click Me</button>
+<button id="removeBtn">Remove Special Event</button>
+
+<div id="output">Output will appear here</div>
+
+<div class="hover-box" id="hoverBox">Hover Over Me</div>
+
+<form id="myForm">
+    <input type="text" placeholder="Type something" required>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+
+let btn = document.getElementById("btn");
+let output = document.getElementById("output");
+let removeBtn = document.getElementById("removeBtn");
+let hoverBox = document.getElementById("hoverBox");
+let form = document.getElementById("myForm");
+
+// Normal click
+btn.addEventListener("click", function () {
+    output.textContent = "Button clicked (normal function)";
+});
+
+// Arrow function
+btn.addEventListener("click", () => {
+    btn.style.backgroundColor = "lightgreen";
+});
+
+// Event object
+btn.addEventListener("click", function (event) {
+    output.textContent += " | Target: " + event.target.tagName;
+});
+
+// Remove event example
+function handleClick() {
+    output.textContent = "This event will be removed!";
+}
+
+btn.addEventListener("click", handleClick);
+
+removeBtn.addEventListener("click", function () {
+    btn.removeEventListener("click", handleClick);
+    output.textContent = "Special event removed successfully";
+});
+
+// Keydown event
+document.addEventListener("keydown", function (e) {
+    output.textContent = "Key Pressed: " + e.key;
+});
+
+// Mouseover / Mouseout
+hoverBox.addEventListener("mouseover", function () {
+    hoverBox.style.backgroundColor = "orange";
+    hoverBox.textContent = "Mouse Over!";
+});
+
+hoverBox.addEventListener("mouseout", function () {
+    hoverBox.style.backgroundColor = "lightgray";
+    hoverBox.textContent = "Hover Over Me";
+});
+
+// Submit event
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    output.textContent = "Form submitted without page reload!";
+});
+
+</script>
+
+</body>
+</html>

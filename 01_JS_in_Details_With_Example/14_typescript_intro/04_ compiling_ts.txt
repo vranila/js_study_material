@@ -1,0 +1,8 @@
+Install TypeScript:
+npm install -g typescript
+
+Compile:
+tsc file.ts
+
+Watch mode:
+tsc --watch

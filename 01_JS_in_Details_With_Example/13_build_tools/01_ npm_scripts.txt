@@ -1,0 +1,39 @@
+What are npm Scripts?
+npm scripts are custom command shortcuts defined inside package.json.
+
+They allow you to automate tasks like:
+    Start server
+    Build project
+    Run tests
+    Lint code
+    Compile TypeScript
+
+
+Basic Structure
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo Building project...",
+    "test": "echo Running tests..."
+  }
+}
+
+
+Run via:
+npm run build
+npm run test
+
+For start
+npm start
+
+
+Why npm Scripts Matter
+Standard across all Node projects
+Used in:
+    React
+    Angular
+    Next.js
+
+Simplifies project automation

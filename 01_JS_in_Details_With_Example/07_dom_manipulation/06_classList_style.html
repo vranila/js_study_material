@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>classList & Style Manipulation</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            margin: 20px auto;
+            border: 2px solid black;
+            transition: 0.3s;
+        }
+
+        .active {
+            background-color: lightgreen;
+            font-weight: bold;
+        }
+
+        .old {
+            border: 3px dashed red;
+        }
+
+        .new {
+            border: 3px solid blue;
+        }
+
+        button {
+            margin: 5px;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+<h2>classList & Style Example</h2>
+
+<div class="box old">Sample Box</div>
+
+<button onclick="addClass()">Add Class</button>
+<button onclick="removeClass()">Remove Class</button>
+<button onclick="toggleClass()">Toggle Class</button>
+<button onclick="checkClass()">Check Class</button>
+<button onclick="replaceClass()">Replace Class</button>
+<br><br>
+<button onclick="changeInlineStyle()">Inline Style</button>
+<button onclick="multipleStyles()">Multiple Styles</button>
+<button onclick="getStyle()">Get Computed Style</button>
+
+<div id="output"></div>
+
+<script>
+
+let element = document.querySelector(".box");
+let output = document.getElementById("output");
+
+// ===============================
+// classList METHODS
+// ===============================
+
+function addClass() {
+    element.classList.add("active");
+}
+
+function removeClass() {
+    element.classList.remove("active");
+}
+
+function toggleClass() {
+    element.classList.toggle("active");
+}
+
+function checkClass() {
+    if (element.classList.contains("active")) {
+        output.textContent = "Class 'active' is present";
+    } else {
+        output.textContent = "Class 'active' is NOT present";
+    }
+}
+
+function replaceClass() {
+    element.classList.replace("old", "new");
+}
+
+// ===============================
+// STYLE MANIPULATION
+// ===============================
+
+function changeInlineStyle() {
+    element.style.color = "red";
+    element.style.backgroundColor = "yellow";
+}
+
+function multipleStyles() {
+    element.style.cssText = "color: blue; font-size: 20px; background-color: pink;";
+}
+
+function getStyle() {
+    let style = window.getComputedStyle(element);
+    output.textContent = "Computed Color: " + style.color;
+}
+
+</script>
+
+</body>
+</html>

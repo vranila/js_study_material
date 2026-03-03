@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setTimeout & setInterval Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .box {
+            font-size: 22px;
+            padding: 20px;
+            margin: 15px auto;
+            width: 300px;
+            border-radius: 8px;
+            background-color: lightblue;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>setTimeout & setInterval Demo</h2>
+
+<div class="box" id="output">Waiting...</div>
+
+<button onclick="startTimeout()">Start setTimeout</button>
+<button onclick="startInterval()">Start setInterval</button>
+<button onclick="stopInterval()">Stop Interval</button>
+
+<script>
+
+// ===============================
+// setTimeout()
+// ===============================
+
+function startTimeout() {
+    let box = document.getElementById("output");
+
+    box.textContent = "Will change after 2 seconds...";
+    box.style.backgroundColor = "orange";
+
+    setTimeout(() => {
+        box.textContent = "Changed after 2 seconds!";
+        box.style.backgroundColor = "lightgreen";
+    }, 2000);
+}
+
+
+// ===============================
+// setInterval()
+// ===============================
+
+let intervalId;
+let count = 0;
+
+function startInterval() {
+    let box = document.getElementById("output");
+
+    count = 0;
+
+    intervalId = setInterval(() => {
+        count++;
+        box.textContent = "Counter: " + count;
+        box.style.backgroundColor = "lightblue";
+
+        if (count === 5) {
+            clearInterval(intervalId);
+            box.textContent = "Stopped automatically after 5 seconds";
+            box.style.backgroundColor = "lightcoral";
+        }
+
+    }, 1000);
+}
+
+
+// ===============================
+// clearInterval()
+// ===============================
+
+function stopInterval() {
+    clearInterval(intervalId);
+    document.getElementById("output").textContent = "Interval Stopped Manually";
+}
+
+</script>
+
+</body>
+</html>

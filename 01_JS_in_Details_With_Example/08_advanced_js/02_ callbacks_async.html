@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback & Callback Hell</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .box {
+            width: 350px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: lightblue;
+            font-size: 18px;
+            min-height: 40px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Callback Demonstration</h2>
+
+<div class="box" id="output">Waiting...</div>
+
+<button onclick="runCallback()">Run Callback Example</button>
+<button onclick="runCallbackHell()">Run Callback Hell</button>
+
+<script>
+
+// ===============================
+// WHAT IS A CALLBACK?
+// ===============================
+
+function fetchData(callback) {
+    let box = document.getElementById("output");
+    box.textContent = "Fetching Data...";
+    box.style.backgroundColor = "orange";
+
+    setTimeout(() => {
+        callback("Data received successfully!");
+    }, 1000);
+}
+
+function runCallback() {
+    fetchData(function(data) {
+        let box = document.getElementById("output");
+        box.textContent = data;
+        box.style.backgroundColor = "lightgreen";
+    });
+}
+
+
+// ===============================
+// CALLBACK HELL
+// ===============================
+
+function runCallbackHell() {
+    let box = document.getElementById("output");
+    box.textContent = "Starting Steps...";
+    box.style.backgroundColor = "lightcoral";
+
+    setTimeout(() => {
+        box.textContent = "Step 1 Completed";
+
+        setTimeout(() => {
+            box.textContent = "Step 2 Completed";
+
+            setTimeout(() => {
+                box.textContent = "Step 3 Completed";
+                box.style.backgroundColor = "lightgreen";
+            }, 1000);
+
+        }, 1000);
+
+    }, 1000);
+}
+
+</script>
+
+</body>
+</html>
