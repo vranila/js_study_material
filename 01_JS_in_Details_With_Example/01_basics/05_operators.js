@@ -102,7 +102,7 @@ console.log(" ");
 console.log("-------------------------------delete Operator-------------------------------");
 let obj = { name: "JS", version: "ES6" };
 delete obj.version;
-console.log(obj); 
+console.log(obj);//number is fine I think
 
 console.log(" ");
 
