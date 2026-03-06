@@ -43,6 +43,8 @@ console.log(arr7.includes("x"));
 let arr8 = [5, 10, 15, 20];
 console.log(arr8.length);
 
+let arr9 = ['h', 'k', 'o'];
+console.log(`array9 length ${arr9.length}`);
 
 // Original array
 let numbers = [10, 15, 20, 25, 30];

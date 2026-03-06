@@ -54,7 +54,7 @@ console.log("JS  ".trimEnd());
 console.log("5".padStart(3, "0"));
 
 // padEnd()
-console.log("JS".padEnd(5, "*"));
+console.log("JS".padEnd(3, "*"));
 
 // repeat()
 console.log("Hi ".repeat(3));
