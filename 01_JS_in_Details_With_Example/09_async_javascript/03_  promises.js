@@ -1,7 +1,7 @@
 // ===============================
 // WHAT IS A PROMISE?
 // ===============================
-
+//promise represents a value that will be available later.
 // A Promise represents a future value.
 // It has 3 states:
 // 1. pending

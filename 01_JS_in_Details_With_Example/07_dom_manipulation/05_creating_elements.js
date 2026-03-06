@@ -18,7 +18,7 @@ document.body.appendChild(div);
 let container = document.querySelector(".container");
 container.appendChild(div);
 
-// prepend
+// prepend == prepend() inserts an element at the beginning of a parent element.
 container.prepend(div);
 
 // insertBefore
