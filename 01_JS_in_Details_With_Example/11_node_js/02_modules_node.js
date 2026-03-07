@@ -14,7 +14,7 @@ module.exports = add;
 // file: app.js
 // ========================================
 
-const add = require("./math");
+add = require("./math");
 console.log(add(2, 3));
 
 // ----------------------------------------
