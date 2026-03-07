@@ -1,37 +1,35 @@
 🔹 What is Node.js?
-Node.js is a JavaScript runtime built on Chrome’s V8 engine that allows you to execute JavaScript outside the browser.
+        Node.js is a JavaScript runtime built on Chrome’s V8 engine that allows you to execute JavaScript outside the browser.
 
 
 🔹Why Node.js is important?
-
-
-Run backend servers
-Build REST APIs
-Create CLI tools
-Manage build tools (Webpack, Vite)
-Run JavaScript on servers
+        Run backend servers
+        Build REST APIs
+        Create CLI tools
+        Manage build tools (Webpack, Vite)
+        Run JavaScript on servers
 
 
 🔹 Architecture Overview
-Node uses:
-V8 Engine (compiles JS to machine code)
-Event Loop
-Non-blocking I/O model
-Single-threaded execution model
+        Node uses:
+        V8 Engine (compiles JS to machine code)
+        Event Loop
+        Non-blocking I/O model
+        Single-threaded execution model
 
 
 🔹 Installation Steps
-Go to official website
-Download LTS version
-Install normally
-Verify installation
-    node -v
-    npm -v
+        Go to official website
+        Download LTS version
+        Install normally
+        Verify installation
+        node -v
+        npm -v
 
-    Expected output:
+        Expected output:
 
-    v20.x.x
-    10.x.x
+        v20.x.x
+        10.x.x
 
 
 
@@ -64,6 +62,8 @@ Output:
 
 Run:
         node calculator.js
+
+        
 🔹 What Happens Internally?
 
 When you run:

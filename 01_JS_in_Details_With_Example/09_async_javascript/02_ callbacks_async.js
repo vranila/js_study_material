@@ -2,8 +2,7 @@
 // WHAT IS A CALLBACK?
 // ===============================
 
-// A callback is a function passed as an argument
-// to another function and executed later.
+// A callback is a function passed as an argument to another function and executed later.
 
 function fetchData(callback) {
   // Simulating async operation

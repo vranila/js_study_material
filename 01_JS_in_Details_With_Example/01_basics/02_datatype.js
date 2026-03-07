@@ -2,10 +2,13 @@
 1.string
 2.number  - 1,2,3
 3.null
-4.booleanb  - true or false
+4.boolean  - true or false
 5.bigint    - 12345678
 6.symbol
 7.undefined
+
+
+NULL type is object
 */
 console.log("-----------------------Primitive--------------------------")
 
@@ -71,75 +74,4 @@ console.log(score); // 150
 const pi = 3.14;
 //pi = 3.14159; // invalid, will throw an error if uncommented
 console.log(pi); // 3.14 
-
-
-/*
-type conversion
-implicit conversion(done automatically)
-explicit conversion(done manually using built in functions)
-*/
-
-//implicit
-//string conversion
-a= 10+"24";
-console.log(a);
-
-//number conversion
-a= "10"-24;
-b=10/5;
-c="100"*true
-console.log(a,b,c);
-
-//boolean conversion
-a= !!0;
-b=!!1;
-c=!!"";
-d=!!"HI"
-console.log(a,b,c,d);
-
-
-//explicit
-//tostring
-let num=100;
-let notnulldefined=String(null)
-console.log(num.toString(),notnulldefined.toString());
-
-
-//tonumber
-let anum= Number("100");
-let bnum=parseInt("100");
-let cnum=parseFloat("10.5")+"200";
-console.log(anum,bnum,cnum);
-
-
-//toboolean
-let abool=Boolean(0)  ;      // false
-let bbool=Boolean("")       // false
-let cbool=Boolean("Hello")  // true
-console.log(abool,bbool,cbool);
-
-
-// date conversion 
-// date -> number
-let date = new Date();
-let value0 = date.getTime();
-console.log(date, value0);
-
-let value1 = Date.now();
-console.log(value1);
-
-
-let value2 = Number(new Date());
-console.log(value2);
-
-//date-> string 
-let date1 = new Date();
-console.log(String(date1));
-
-
-
-
-
-
-
 
