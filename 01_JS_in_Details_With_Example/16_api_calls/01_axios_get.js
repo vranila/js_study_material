@@ -1,4 +1,6 @@
-//Axios is a promise-based HTTP client used in JavaScript to send requests to servers (APIs). It works in both browser environments and Node.js. Developers commonly use Axios to fetch data from APIs, send data to servers, and handle HTTP requests easily compared to raw XMLHttpRequest.
+//Axios is a promise-based HTTP client used in JavaScript to send requests to servers (APIs). 
+// It works in both browser environments and Node.js.
+// Developers commonly use Axios to fetch data from APIs, send data to servers, and handle HTTP requests easily compared to raw XMLHttpRequest.
 
 /* 1. Why Axios is Used
 Axios simplifies HTTP communication.
